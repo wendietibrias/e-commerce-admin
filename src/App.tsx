@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes,Route } from 'react-router-dom';
+import { 
+  MainDashboard,
+  Login,
+  Dashboard, 
+  Products,
+  Categories, 
+  CreateCategories,
+  CreateProducts,
+  UpdateProducts, 
+  UpdateCategories,
+  Banners,
+  CreateBanners,
+  UpdateBanners, 
+  Profile
+} from './pages';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Routes>
+         <Route path="/login" element={<Login/>}/>
+         <Route path="/" element={<MainDashboard/>}>
+            <Route index element={<Dashboard/>}/>
+            <Route path="products" element={<Products/>}/>
+            <Route path="products/create" element={<CreateProducts/>}/>
+            <Route path="products/update/:id" element={<UpdateProducts/>}/>
+            <Route path="categories" element={<Categories/>}/>
+            <Route path="categories/create" element={<CreateCategories/>}/>
+            <Route path="categories/update/:id" element={<UpdateCategories/>}/>
+            <Route path="banners" element={<Banners/>}/>
+            <Route path="banners/create" element={<CreateBanners/>}/>
+            <Route path="banners/update/:id" element={<UpdateBanners/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+         </Route>
+       </Routes>
     </div>
   );
 }
