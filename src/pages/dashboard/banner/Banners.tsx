@@ -28,7 +28,7 @@ const Banners = () => {
                    </Link>
                 </div>
             </div>
-            <div className="mt-5 grid grid-cols-3 gap-3">
+            <div className="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-1">
                 {banner?.data && Array.isArray(banner?.data) && banner?.data?.map((item : any,idx : number) => <BannerCard key={idx} banner={item}/>)}
             </div>
             <Toaster/>

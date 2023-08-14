@@ -12,7 +12,8 @@ import {
   Banners,
   CreateBanners,
   UpdateBanners, 
-  Profile
+  Profile,
+  Orders
 } from './pages';
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="banners/create" element={<CreateBanners/>}/>
             <Route path="banners/update/:id" element={<UpdateBanners/>}/>
             <Route path="/profile" element={<Profile/>}/>
+            <Route path="/orders" element={<Orders/>}/>
          </Route>
        </Routes>
     </div>

@@ -19,9 +19,5 @@ export default [
     {
         title:"Orders",
         path:"/orders"
-    },
-    {
-        title:"Customers",
-        path:"/customers"
     }
 ]

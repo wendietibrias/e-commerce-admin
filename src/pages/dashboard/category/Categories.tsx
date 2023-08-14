@@ -30,7 +30,7 @@ const Categories = () => {
                     <LoadingSpinner width={40} height={40} color={"rgb(59 130 246)"} />
                 </div>
             ) : (
-                <div className='grid mt-5 grid-cols-3 gap-3'>
+                <div className='grid mt-5 grid-cols-3 gap-3 sm:grid-cols-1'>
                     {categories?.data?.map((category : ICategoryOutput, idx : number) => <CategoryCard category={category} key={idx} />)}
                 </div>
             )}

@@ -7,7 +7,7 @@ type BannerCardProps = {
     banner: {
         id:number | string;
         title:string;
-        description:string;
+        subtitle:string;
         createdAt:string;
         updatedAt:string;
         bannerImage:string;
@@ -43,7 +43,7 @@ const BannerCard = ({
          <img src={`http://localhost:8080/banner/${banner.bannerImage}`} className="rounded-lg h-[200px] w-full object-cover" alt={banner?.title} />
          <div className="pt-3">
            <h4 className="text-gray-700 text-[13px] font-semibold">{banner?.title}</h4>
-           <p className="text-[12px] text-gray-400 mt-1">{banner?.description}</p>
+           <p className="text-[12px] text-gray-400 mt-1">{banner?.subtitle}</p>
             <div className="flex mt-4 items-center gap-x-3">
                  <button onClick={deleteBannerHandler} className="flex items-center gap-x-1 text-[12px] font-medium text-rose-500">
                   <LuTrash/>

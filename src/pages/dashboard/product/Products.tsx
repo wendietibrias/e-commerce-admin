@@ -31,7 +31,7 @@ const Products = () => {
                     <LoadingSpinner width={40} height={40} color={"rgb(59 130 246)"} />
                 </div>
             ) : (
-                <div className="mt-5 grid grid-cols-4 gap-3">
+                <div className="mt-5 grid grid-cols-4 sm:grid-cols-1 gap-3">
                     {products?.data && Array.isArray(products?.data) && products.data.map((product : IProductOuput, idx : number) => <ProductCard key={idx} product={product}/>)}
                 </div>
             )}

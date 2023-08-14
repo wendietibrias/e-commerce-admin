@@ -10,6 +10,7 @@ import Banners from "./dashboard/banner/Banners";
 import CreateBanners from "./dashboard/banner/CreateBanners";
 import UpdateBanners from "./dashboard/banner/UpdateBanners";
 import Profile from "./dashboard/Profile";
+import Orders from "./dashboard/order/Orders";
 
 import MainDashboard from "./dashboard/MainDashboard";
 
@@ -26,5 +27,6 @@ export {
     Banners,
     CreateBanners,
     UpdateBanners,
-    Profile
+    Profile,
+    Orders
 }

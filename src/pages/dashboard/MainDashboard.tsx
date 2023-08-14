@@ -13,7 +13,7 @@ const MainDashboard = () => {
     return (
         <div className="w-full min-h-screen bg-gray-100">
            <Navbar/>
-           <div className="w-[80%] mx-auto py-5">
+           <div className="w-[80%] sm:w-full sm:px-5 mx-auto py-5">
              <Outlet/>
            </div>
         </div>

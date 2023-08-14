@@ -11,11 +11,16 @@ const Dashboard = () => {
     data:statistic,
     isLoading
   } = useGetDashboardStatisticQuery(null);
- 
+
+ if(isLoading) {
+    return (
+       <div>Loading...</div>
+    )
+ }
 
   return (
     <div className='w-full'>
-       <div className="grid grid-cols-3 gap-3">
+       <div className="grid grid-cols-3 sm:grid-cols-1 gap-3">
          <ScoreBoard title="Revenue">
            <div className="flex items-center justify-between">
               <h3 className='text-gray-700 font-bold text-2xl'>{convertMoney(statistic?.data?.revenue || 0)}</h3>
@@ -35,7 +40,7 @@ const Dashboard = () => {
            </div>
          </ScoreBoard>
        </div>
-       <GraphicChart/>
+       <GraphicChart revenue={statistic?.data?.revenue} orders={statistic?.data?.orders} products={statistic?.data?.products}/>
     </div>
   )
 }

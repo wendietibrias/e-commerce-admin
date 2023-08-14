@@ -67,7 +67,7 @@ const CreateBanners = () => {
                         <BiPlus className="text-lg font-bold" />
                         Upload a banner
                     </button>
-                    {files && Array.isArray(files) && <p className="text-[13px] font-medium text-gray-500">{files[0].filePath}</p>}
+                    {files && Array.isArray(files) && <p className="text-[13px] font-medium text-gray-500">{files[0]?.filePath}</p>}
                     </div>
                     }
                     </UploadButton>

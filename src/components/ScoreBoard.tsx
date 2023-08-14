@@ -10,7 +10,7 @@ const ScoreBoard = ({
     children
 } : ScoreBoardProps) => {
   return (
-    <div className={`w-full bg-white shadow-lg shadow-gray-200 rounded-md p-5`}>
+    <div className={`w-full bg-white sm:px-5 sm:py-7 shadow-lg shadow-gray-200 rounded-md p-5`}>
         {children}
         <h5 className="text-[13px] mt-1 font-medium text-gray-500">{title}</h5>
     </div>

@@ -88,7 +88,7 @@ const UpdateProducts = () => {
                 <Input name="title" placeholder="Product title" type="text" register={register} error={errors?.title ? true : false}/>
                 <Input name="excerpt" placeholder="Product excerpt" type="text" register={register} error={errors?.excerpt ? true : false}/>
                 <Input name="price" placeholder="Product price" type="number" register={register} error={errors?.price ? true : false}/>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-1 gap-3">
                   <Input type="number" name="stock" placeholder="Product stock" register={register} error={errors?.stock ? true : false}/>
                   <div className="w-full flex flex-col gap-y-2">
                     <label className="text-[13px] font-medium text-gray-500">Category</label>
@@ -119,7 +119,7 @@ const UpdateProducts = () => {
                     <BiPlus className="text-lg font-bold" />
                     Upload a file
                 </button>
-                {files && Array.isArray(files) && <p className="text-[13px] font-medium text-gray-500">{files[0].filePath}</p>}
+                {files && Array.isArray(files) && <p className="text-[13px] font-medium text-gray-500">{files[0]?.filePath}</p>}
                 </div>
               }
             </UploadButton>

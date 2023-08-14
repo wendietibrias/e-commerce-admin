@@ -1,34 +1,42 @@
-
-import React from 'react';
 import Chart from "react-apexcharts";
 
-const GraphicChart = () => {
+type GraphicChartProps = {
+   revenue:number;
+   orders:number;
+   products:number;
+}
+
+const GraphicChart = ({
+   revenue,
+   orders,
+   products
+} : GraphicChartProps) => {
   const options = {
         chart: {
           id: "basic-bar"
         },
         xaxis: {
-          categories: ["January","Febuary","March","Apr", "June","July","August" , "September","October","November","December"]
+          categories: ["January", "Febuary" , "March" , "Mai" , "June" , "July" , "August" , "September" , "October" , "November", "December"]
         }
   };
 
   const series = [
         {
           name: "Revenue",
-          data: [30, 40, 45, 50, 49, 60, 70, 91,55,55,55,55]
+          data: [revenue]
         },
         {
           name:"Orders",
-          data:[1]
+          data:[orders]
         },
         {
-          name:"Customers",
-          data:[10]
+          name:"Products",
+          data:[products]
         }
       ]
 
   return (
-    <div className='w-full p-2 shadow-lg shadow-gray-200 bg-white mt-7'>
+    <div className='w-full p-2 shadow-lg sm:hidden shadow-gray-200 bg-white mt-7'>
        <Chart type="bar" options={options} series={series} />
     </div>
   )
